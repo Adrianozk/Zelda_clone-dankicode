@@ -126,6 +126,8 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
 			}
 		} else if (gameState.equals("GAME_OVER" )) {
 			System.out.println("Game over!!");
+			String curWorld = "level" + CUR_LEVEL + ".png";
+			World.restartGame(curWorld);
 		}
 	}
 	
@@ -160,7 +162,7 @@ public class Game extends Canvas implements Runnable, KeyListener, MouseListener
 		g.drawImage(image, 0, 0, WIDTH * SCALE, HEIGHT * SCALE, null);
 		g.setColor(Color.white);
 		g.setFont(new Font("arial", Font.BOLD, 17));
-		g.drawString("Munição: " + player.ammo, 600, 20);
+		g.drawString("Munição: " + player.ammo, 550, 20);
 		bs.show();
 	}
 	

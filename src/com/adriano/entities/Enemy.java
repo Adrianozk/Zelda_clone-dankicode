@@ -57,6 +57,9 @@ public class Enemy extends Entity {
 			// O que podemos fazer?
 			if (Game.rand.nextInt(100) < 10) {	
 				Game.player.life -= Game.rand.nextInt(3);
+				if (Game.player.life < 0) {
+					Game.player.life = 0;
+				}
 				Game.player.isDamaged = true;
 			}
 		}
